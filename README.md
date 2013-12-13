@@ -1,4 +1,4 @@
-unbabel_api
+Unbabel API
 ===========
 
-The public api to request translations
+This github project contains the documentation for interacting with the Unbabel API.
