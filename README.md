@@ -58,7 +58,7 @@ Language Pairs
 Language pairs currently available in the unbabel platform:
 
 ```shell
-curl -H "Authorization: ApiKey user1:f4c76b650164c179cc1b199c98ea8ef75d7dbfa6" 
+curl -H "Authorization: ApiKey username:f4c76b650164c179cc1b199c98ea8ef75d7dbfa6" 
      -H "Content-Type: application/json" 
      -X GET http://www.unbabel.co/tapi/v2/language_pair/ 
 ```
@@ -94,7 +94,7 @@ Tones
 Language Tones available in the unbabel platform:
 
 ```shell
-curl -H "Authorization: ApiKey user1:f4c76b650164c179cc1b199c98ea8ef75d7dbfa6" 
+curl -H "Authorization: ApiKey username:f4c76b650164c179cc1b199c98ea8ef75d7dbfa6" 
      -H "Content-Type: application/json" 
      -X GET http://www.unbabel.co/tapi/v2/tone/ 
 ```
