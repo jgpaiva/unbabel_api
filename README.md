@@ -17,7 +17,7 @@ Request Translation
 
 
 ```shell
-curl -H "Authorization: ApiKey user1:f4c76b650164c179cc1b199c98ea8ef75d7dbfa6" 
+curl -H "Authorization: ApiKey username:f4c76b650164c179cc1b199c98ea8ef75d7dbfa6" 
      -H "Content-Type: application/json" 
      -X POST http://www.unbabel.co/tapi/v2/translation/ 
      --data 'data'
