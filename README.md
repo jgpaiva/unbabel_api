@@ -31,9 +31,10 @@ Where data is a json file which accepts the following arguments:
 * call_back_url - Once the job is done the result will be posted to this endpoint.
 * type - The type of the job, free or paid (default). Note that you need to ask for special permissions to submit free jobs ( email contact@unbabel.co ). 
 * visibility - If the job will be private (default) or public. Public jobs will mention the translators that made them. To submit a free job you need to submit the url where the job will be available.
-* public_url - Url where the job will be posted.
-* formality - The tone that should be used in the translation.
-* instructions - Client instructions for the translator.
+* public_url (required if visibility is public) - Url where the job will be posted.
+* formality (optional) - The tone that should be used in the translation.
+* instructions (optional) - Client instructions for the translator.
+* topics (optional) - List of the topics of text. 
 
 Example:
 
