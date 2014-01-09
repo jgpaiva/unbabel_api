@@ -207,6 +207,33 @@ This query returns a list of all language tones supported by the unbabel platfor
 
 
 
+Topics
+================================
+
+Language Topics available in the unbabel platform:
+
+```shell
+curl -H "Authorization: ApiKey username:f4c76b650164c179cc1b199c98ea8ef75d7dbfa6" 
+     -H "Content-Type: application/json" 
+     -X GET http://www.unbabel.co/tapi/v2/topic/ 
+```
+
+Response:
+
+This query returns a list of all topics supported by the unbabel platform. 
+
+```json
+
+{
+    "objects": [
+                    {"tone": {"name": "politics"}}, 
+                    {"tone": {"name": "gossip"}}
+                ]
+}
+
+```
+
+
 SDKs
 ================================
 
