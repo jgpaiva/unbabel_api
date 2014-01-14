@@ -27,7 +27,7 @@ curl -H "Authorization: ApiKey username:api_token"
      --data 'data'
 ```
 
-Where data is a json file which accepts the following arguments:
+Where data is a json dictionary with the following attributes:
 
 * text (required) - the text to be translated.
 * target_language (required) - the language to translate the text to.
