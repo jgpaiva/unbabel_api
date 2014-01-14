@@ -1,7 +1,11 @@
 Unbabel API
 ===========
 
-This github project contains the documentation for interacting with the Unbabel API.
+Unbabel: Translation as a Service
+
+Signup for Unbabel to get an api token at http://www.unbabel.co
+
+Unbabel provides human quality translation at a fraction of the cost and with fast translation times. This is the documention for the Unbabel API. 
 
 Authentication
 ================================
