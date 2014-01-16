@@ -143,8 +143,7 @@ Response:
 }
 ```
 
-
-     Report a Translation
+Report a Translation
 ================================
 
 Currently we handle reports on a one by one basis so a staff member will
@@ -180,7 +179,7 @@ Example:
 ```
 
 
-     Language Pairs
+Language Pairs
 ================================
 
 Language pairs currently available in the unbabel platform:
