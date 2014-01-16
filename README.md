@@ -144,6 +144,40 @@ Response:
 ```
 
 
+     Report a Translation
+================================
+
+Currently we handle reports on a one by one basis so a staff member will
+review every report and take the appropriate action
+
+How to report (reject) a translation:
+
+```shell
+curl -H "Authorization: ApiKey username:api_token" 
+     -H "Content-Type: application/json" 
+     -X POST http://www.unbabel.co/tapi/v2/report/ 
+     --data 'data'
+```
+
+Where data is a json dictionary with the following attributes:
+
+* uid (required) - the job unique identifier.
+* report_type - The reason for rejecting
+*    fluency
+*    grammar
+*    meaning
+*    other
+* comments - Comments on the reason
+
+Example:
+
+```json
+{   
+    "uid": "29de9551d9"
+    "report_type": "fluency",
+    "comments": "wrong tone"
+}
+```
 
 
      Language Pairs
