@@ -162,11 +162,11 @@ Where data is a json dictionary with the following attributes:
 
 * uid (required) - the job unique identifier.
 * report_type - The reason for rejecting
-*    fluency
-*    grammar
-*    meaning
-*    other
-* comments - Comments on the reason
+     * fluency
+     * grammar
+     * meaning
+     * other
+* comments - Comments on the reason.
 
 Example:
 
