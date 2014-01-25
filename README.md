@@ -3,15 +3,19 @@ Unbabel API
 
 Unbabel: Translation as a Service
 
-Signup for Unbabel to get an api token at http://www.unbabel.co
-
 Unbabel provides human quality translation at a fraction of the cost and with fast translation times. This is the documention for the Unbabel API. 
+
 
 Authentication
 ================================
 
-Unbabel supports an api key-based authentication mechanism. The key is the api key associated with an account and can be obtained in the unbabel website on your profile. This key should be passed as a request header with each request. All API calls described in this document require authentication.
+Unbabel supports an api key-based authentication mechanism. 
 
+Signup for Unbabel to get an api token at http://www.unbabel.com. The key is the api key associated with an account and can be obtained in the unbabel website on your profile. This key should be passed as a request header with each request. 
+
+All API calls described in this document require authentication. 
+
+To order a paid translation you first need to add some money to your account on Unbabel's website. If you just want to test the api, please refer to the sandbox section at the bottom of this page.
 
 Translation
 ============
@@ -146,6 +150,8 @@ Response:
 Report a Translation
 ================================
 
+(Not yet implemented. If you need to report a job please email api@unbabel.com and we will take care of that manually.)
+
 Currently we handle reports on a one by one basis so a staff member will
 review every report and take the appropriate action
 
@@ -271,6 +277,13 @@ This query returns a list of all topics supported by the unbabel platform.
 
 ```
 
+Sandbox
+================================
+
+If you want to use the api in sandbox mode please email api@unbabel.com with that request. 
+We will create a user, top up your account with credits and send you and api token. 
+All the api calls should be made using the following url: http://sandbox.unbabel.com .
+Note that tasks performed on sandbox mode will not pass by the crowd of translators. To mimic the behaviour of the system, the result of Machine Translation will be made available (either by using the endpoint, or by fetching a translation) two minutes after the task submission. 
 
 SDKs
 ================================
