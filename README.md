@@ -11,7 +11,7 @@ Authentication
 
 Unbabel supports an api key-based authentication mechanism. 
 
-Signup for Unbabel to get an api token at http://www.unbabel.com. The key is the api key associated with an account and can be obtained in the unbabel website on your profile. This key should be passed as a request header with each request. 
+Signup for Unbabel to get an api token at https://www.unbabel.com. The key is the api key associated with an account and can be obtained in the unbabel website on your profile. This key should be passed as a request header with each request. 
 
 All API calls described in this document require authentication. 
 
@@ -83,7 +83,7 @@ Returns the current state of a translation.
 ```shell
 curl -H "Authorization: ApiKey username:api_token" 
      -H "Content-Type: application/json" 
-     -X GET http://www.unbabel.co/tapi/v2/translation/uid 
+     -X GET https://www.unbabel.co/tapi/v2/translation/uid/
 ```
 
 Response:
@@ -110,7 +110,7 @@ Returns a list of translations done by this user.
 ```shell
 curl -H "Authorization: ApiKey username:api_token" 
      -H "Content-Type: application/json" 
-     -X GET http://www.unbabel.co/tapi/v2/translation/ 
+     -X GET https://www.unbabel.co/tapi/v2/translation/ 
 ```
 
 Response:
@@ -160,7 +160,7 @@ How to report (reject) a translation:
 ```shell
 curl -H "Authorization: ApiKey username:api_token" 
      -H "Content-Type: application/json" 
-     -X POST http://www.unbabel.co/tapi/v2/report/ 
+     -X POST https://www.unbabel.co/tapi/v2/report/ 
      --data 'data'
 ```
 
@@ -193,7 +193,7 @@ Language pairs currently available in the unbabel platform:
 ```shell
 curl -H "Authorization: ApiKey username:api_token" 
      -H "Content-Type: application/json" 
-     -X GET http://www.unbabel.co/tapi/v2/language_pair/ 
+     -X GET https://www.unbabel.co/tapi/v2/language_pair/ 
 ```
 
 Response:
@@ -229,7 +229,7 @@ Language Tones available in the unbabel platform:
 ```shell
 curl -H "Authorization: ApiKey username:api_token" 
      -H "Content-Type: application/json" 
-     -X GET http://www.unbabel.co/tapi/v2/tone/ 
+     -X GET https://www.unbabel.co/tapi/v2/tone/ 
 ```
 
 Response:
@@ -259,7 +259,7 @@ Language Topics available in the unbabel platform:
 ```shell
 curl -H "Authorization: ApiKey username:api_token" 
      -H "Content-Type: application/json" 
-     -X GET http://www.unbabel.co/tapi/v2/topic/ 
+     -X GET https://www.unbabel.co/tapi/v2/topic/ 
 ```
 
 Response:
