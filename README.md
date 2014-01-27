@@ -37,12 +37,11 @@ Where data is a json dictionary with the following attributes:
 * target_language (required) - the language to translate the text to.
 * source_language - the language of text. If not supplemented it will be auto-detected from the text.
 * call_back_url - Once the job is done the result will be posted to this endpoint.
-* type - The type of the job, free or paid (default). Note that you need to ask for special permissions to submit free jobs ( email contact@unbabel.co ). 
-* visibility - If the job will be private (default) or public. Public jobs will mention the translators that made them. To submit a free job you need to submit the url where the job will be available.
-* public_url (required if visibility is public) - Url where the job will be posted.
+     * For instance: http://news.unbabel.co/unbabel_endpoint/    
 * formality (optional) - The tone that should be used in the translation.
 * instructions (optional) - Client instructions for the translator.
 * topics (optional) - List of the topics of text. 
+     * For instance ["politics"]   
 
 Example:
 
@@ -75,6 +74,60 @@ Response:
 * source_language - The detected source language
 * price - The total price of the requested translation in euro cents.
 
+
+Bulk Request Translations
+-------------
+
+
+```shell
+curl -H "Authorization: ApiKey username:api_token" 
+     -H "Content-Type: application/json" 
+     -X patch http://www.unbabel.co/tapi/v2/translation/ 
+     --data 'data'
+```
+
+Where data is a json dictionary of the following form:
+
+```json
+{ "objects": [
+     {   
+    "text":"Translation 1",
+    "target_language":"pt",
+     },
+     ....
+     {   
+    "text":"Translation n",
+    "target_language":"pt",
+     }
+     ]
+}
+```
+
+Response:
+
+```json
+{ "objects": [
+     {
+     "client": "gracaninja", 
+     "price": 2.0, 
+     "status": "new", 
+     "target_language": "pt", 
+     "text": "translation 1", 
+     "uid": "ee2578c2fd"
+     },
+     ....
+     {
+     "client": "gracaninja", 
+     "price": 2.0, 
+     "status": "new", 
+     "target_language": "pt", 
+     "text": "translation n", 
+     "uid": "49e49bdc2d"}
+     ]
+}
+```
+
+
 Query a Translation
 -------------
 
@@ -105,12 +158,19 @@ Response:
 Query all Translations
 -------------
 
-Returns a list of translations done by this user.
+Returns a list of translations done by this user. 
+An optional query parameter can be passed to select translations with a given status: 
+     * new - The translation has been created and is being pre-processed.
+     * ready - The translation is ready to be processed in the unbabel platform.
+     * in_progressed - The translation is being executed.
+     * delivered - The translation has already been returned to the client (either using the endpoint or query for a translation).
+
+
 
 ```shell
 curl -H "Authorization: ApiKey username:api_token" 
      -H "Content-Type: application/json" 
-     -X GET https://www.unbabel.co/tapi/v2/translation/ 
+     -X GET https://www.unbabel.co/tapi/v2/translation/?status=ready
 ```
 
 Response:
@@ -128,17 +188,16 @@ Response:
      "objects": [
           {
                "price": 5,
-               "status": "new",
+               "status": "ready",
                "text": "This is a test task ",
                "uid": "a281dab6e1"
           },
           {
                "price": 4,
-               "status": "accepted",
+               "status": "ready",
                "text":"In the era of Siri",
                "target_language":"pt",
                "source_language": "en",
-               "translated_text": "teste super legal ordem.",
                "uid": "29de9551d9"
           }
 
@@ -270,8 +329,8 @@ This query returns a list of all topics supported by the unbabel platform.
 
 {
     "objects": [
-                    {"tone": {"name": "politics"}}, 
-                    {"tone": {"name": "gossip"}}
+                    {"topic": {"name": "politics"}}, 
+                    {"topic": {"name": "gossip"}}
                 ]
 }
 
