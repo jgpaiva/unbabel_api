@@ -283,7 +283,7 @@ Sandbox
 If you want to use the api in sandbox mode please email api@unbabel.com with that request. 
 We will create a user, top up your account with credits and send you and api token. 
 All the api calls should be made using the following url: http://sandbox.unbabel.com .
-Note that tasks performed on sandbox mode will not pass by the crowd of translators. To mimic the behaviour of the system, the result of Machine Translation will be made available (either by using the endpoint, or by fetching a translation) 10 minutes after the task submission. 
+Note that tasks performed on sandbox mode will not pass by the crowd of translators. To mimic the behaviour of the system, the result of Machine Translation will be made available (either by using the endpoint, or by fetching a translation) 1 minute after the task submission. 
 
 SDKs
 ================================
