@@ -36,7 +36,7 @@ Where data is a json dictionary with the following attributes:
 * text (required) - the text to be translated.
 * target_language (required) - the language to translate the text to.
 * source_language - the language of text. If not supplemented it will be auto-detected from the text.
-* call_back_url - Once the job is done the result will be posted to this endpoint.
+* callback_url - Once the job is done the result will be posted to this endpoint.
      * For instance: http://news.unbabel.co/unbabel_endpoint/    
 * formality (optional) - The tone that should be used in the translation.
 * instructions (optional) - Client instructions for the translator.
@@ -49,6 +49,7 @@ Example:
 {   
     "text":"In the era of Siri",
     "target_language":"pt",
+    "callback_url": "http://news.unbabel.co/unbabel_endpoint/"
 }
 ```
 
