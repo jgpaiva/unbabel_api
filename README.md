@@ -36,6 +36,7 @@ Where data is a json dictionary with the following attributes:
 * text (required) - the text to be translated.
 * target_language (required) - the language to translate the text to.
 * source_language - the language of text. If not supplemented it will be auto-detected from the text.
+* uid - A unique identifier for the job. If one is not supplied the system will provide one. 
 * callback_url - Once the job is done the result will be posted to this endpoint.
      * For instance: http://news.unbabel.co/unbabel_endpoint/    
 * formality (optional) - The tone that should be used in the translation.
