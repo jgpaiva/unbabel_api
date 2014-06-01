@@ -155,7 +155,7 @@ Response:
      "text":"In the era of Siri",
      "target_language":"pt",
      "source_language": "en",
-     "translated_text": "teste super legal ordem.",
+     "translatedText": "teste super legal ordem.",
      "uid": "29de9551d9"
      
 }
@@ -169,7 +169,7 @@ Returns a list of translations done by this user.
 An optional query parameter can be passed to select translations with a given status: 
      * new - The translation has been created and is being pre-processed.
      * ready - The translation is ready to be processed in the unbabel platform.
-     * in_progressed - The translation is being executed.
+     * processing - The translation is being executed.
      * delivered - The translation has already been returned to the client (either using the endpoint or query for a translation).
 
 
