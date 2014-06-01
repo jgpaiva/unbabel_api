@@ -244,7 +244,7 @@ Example:
 
 ```json
 {   
-    "uid": "29de9551d9"
+    "uid": "29de9551d9",
     "report_type": "fluency",
     "comments": "wrong tone"
 }
