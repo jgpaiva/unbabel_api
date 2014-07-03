@@ -44,6 +44,7 @@ Where data is a json dictionary with the following attributes:
 * instructions (optional) - Client instructions for the translator.
 * topics (optional) - List of the topics of text. 
      * For instance ["politics"]   
+* text_format - The format of the text to be translated [onf of text,html]. 
 
 Example:
 
