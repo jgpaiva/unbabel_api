@@ -71,10 +71,13 @@ Response:
 
 * uid - The unique translation identifier. This will be used for the user to joaccessd the job.
 * status - The current status of the job, can be one of: 
-*    new - The translation has not been started yet. 
-*    processing -  The translation is being proceed.
-*    finshed - The translation has been terminated. The client can access the translation.
-*    accepted - The translation has been accepted by the client. A job is accepted if the clinet does fill a complaint in 48 hours.
+  * New - The translation has not been started yet. 
+  * Translating -  The translation is being proceed.
+  * Completed - The translation has been terminated. The client can access the translation.
+  * Fail - Something went wrong with your order.
+  * Canceled - The translation was canceled.
+  * Accepted - The translation was accepted by the client. A job is accepted if the client does fill a complaint in 48 hours.
+  * Rejected - The translation was rejected by the client.
 * source_language - The detected source language
 * price - The total price of the requested translation in euro cents.
 
