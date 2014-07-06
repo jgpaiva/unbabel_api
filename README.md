@@ -3,7 +3,7 @@ Unbabel API
 
 Unbabel: Translation as a Service
 
-Unbabel provides human quality translation at a fraction of the cost and with fast translation times. This is the documention for the Unbabel API. 
+Unbabel provides human quality translation at a fraction of the cost and with fast translation times. This is the documentation for the Unbabel API.
 
 
 Authentication
@@ -11,7 +11,7 @@ Authentication
 
 Unbabel supports an api key-based authentication mechanism. 
 
-Signup for Unbabel to get an api token at https://www.unbabel.com. The key is the api key associated with an account and can be obtained in the unbabel website on your profile. This key should be passed as a request header with each request. 
+Signup for Unbabel to get an api token at https://www.unbabel.com. The key is the api key associated with an account and can be obtained in the Unbabel website on your profile. This key should be passed as a request header with each request. 
 
 All API calls described in this document require authentication. 
 
@@ -44,7 +44,7 @@ Where data is a json dictionary with the following attributes:
 * instructions (optional) - Client instructions for the translator.
 * topics (optional) - List of the topics of text. 
      * For instance ["politics"]   
-* text_format - The format of the text to be translated [onf of text,html]. 
+* text_format - The format of the text to be translated [one of text,html].
 
 Example:
 
@@ -69,10 +69,10 @@ Response:
 }
 ```
 
-* uid - The unique translation identifier. This will be used for the user to joaccessd the job.
+* uid - The unique translation identifier. This will be used for the user to accessed the job.
 * status - The current status of the job, can be one of: 
   * New - The translation has not been started yet. 
-  * Translating -  The translation is being proceed.
+  * Translating -  The translation is being processed.
   * Completed - The translation has been terminated. The client can access the translation.
   * Fail - Something went wrong with your order.
   * Canceled - The translation was canceled.
@@ -168,7 +168,7 @@ Query all Translations
 Returns a list of translations done by this user. 
 An optional query parameter can be passed to select translations with a given status: 
      * new - The translation has been created and is being pre-processed.
-     * ready - The translation is ready to be processed in the unbabel platform.
+     * ready - The translation is ready to be processed in the Unbabel platform.
      * processing - The translation is being executed.
      * delivered - The translation has already been returned to the client (either using the endpoint or query for a translation).
 
@@ -254,7 +254,7 @@ Example:
 Language Pairs
 ================================
 
-Language pairs currently available in the unbabel platform:
+Language pairs currently available in the Unbabel platform:
 
 ```shell
 curl -H "Authorization: ApiKey username:api_token" 
@@ -264,7 +264,7 @@ curl -H "Authorization: ApiKey username:api_token"
 
 Response:
 
-This query returns a list of all language pairs currently supported by the unbabel platform. Each language pair entry contains the iso639-1 language code and language full name for both the source and target language.
+This query returns a list of all language pairs currently supported by the Unbabel platform. Each language pair entry contains the iso639-1 language code and language full name for both the source and target language.
 
 ```json
 {
@@ -290,7 +290,7 @@ This query returns a list of all language pairs currently supported by the unbab
 Tones
 ================================
 
-Language Tones available in the unbabel platform:
+Language Tones available in the Unbabel platform:
 
 ```shell
 curl -H "Authorization: ApiKey username:api_token" 
@@ -300,7 +300,7 @@ curl -H "Authorization: ApiKey username:api_token"
 
 Response:
 
-This query returns a list of all language tones supported by the unbabel platform. 
+This query returns a list of all language tones supported by the Unbabel platform.
 
 ```json
 
@@ -320,7 +320,7 @@ This query returns a list of all language tones supported by the unbabel platfor
 Topics
 ================================
 
-Language Topics available in the unbabel platform:
+Language Topics available in the Unbabel platform:
 
 ```shell
 curl -H "Authorization: ApiKey username:api_token" 
@@ -330,7 +330,7 @@ curl -H "Authorization: ApiKey username:api_token"
 
 Response:
 
-This query returns a list of all topics supported by the unbabel platform. 
+This query returns a list of all topics supported by the Unbabel platform.
 
 ```json
 
@@ -347,7 +347,7 @@ Sandbox
 ================================
 
 If you want to use the api in sandbox mode please email api@unbabel.com with that request. 
-We will create a user, top up your account with credits and send you and api token. 
+We will create a user, top up your account with credits and send you an api token.
 All the api calls should be made using the following url: http://sandbox.unbabel.com .
 Note that tasks performed on sandbox mode will not pass by the crowd of translators. To mimic the behaviour of the system, the result of Machine Translation will be made available (either by using the endpoint, or by fetching a translation) 1 minute after the task submission. 
 
